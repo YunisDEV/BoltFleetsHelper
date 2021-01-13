@@ -37,7 +37,7 @@ drivers = {}
 payment_methods = [("Cash", "Nağd"), ("Card Terminal", "Kart Terminal"),
                    ("Bolt Payments", "Bolt Payments"), ("Bolt Business", "Bolt Biznes")]
 
-with open('combined_csv.csv', encoding = 'cp850') as file:
+with open('combined_csv.csv', encoding = 'utf8') as file:
     csv_reader = csv.DictReader(file)
     date_minimum = None
     date_maximum = None
@@ -94,5 +94,5 @@ output += f'Cəmi: {summary_of_all_income}'
 os.remove('combined_csv.csv')
 
 os.chdir('../')
-with open('output.txt', 'w') as f:
+with open('output.txt', 'w',encoding='utf8') as f:
     f.write(output)
