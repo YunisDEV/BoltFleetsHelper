@@ -3,3 +3,4 @@ files/**/*
 .vscode
 build
 dist
+output.txt
